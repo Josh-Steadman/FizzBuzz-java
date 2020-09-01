@@ -3,19 +3,28 @@ describe('Fizzscript', function() {
 
     var fizzscript;
 
-    describe('it is divisable by', function() {
+    describe('the number is', function() {
 
-        it('divisable by 3', function() {
+        it('divisible by 3', function() {
           fizzscript =  new Fizzscript() 
-          expect(fizzscript.isDivisableByThree(3)).toBe(true);
+          expect(fizzscript.isDivisibleByThree(3)).toBe(true);
 
         });
 
-        it('not divisable by 3', function() {
+        it('not divisible by 3', function() {
             fizzscript =  new Fizzscript() 
-            expect(fizzscript.isDivisableByThree(4)).toBe(false);
+            expect(fizzscript.isDivisibleByThree(4)).toBe(false);
         });
   
+        it('divisible by 5', function() {
+            fizzscript = new Fizzscript()
+            expect(fizzscript.isDivisibleByFive(5)).toBe(true);
+        }); 
+
+        it('not divisible by 5', function() {
+            fizzscript =  new Fizzscript() 
+            expect(fizzscript.isDivisibleByFive(7)).toBe(false);
+        });
     });
 
 });
