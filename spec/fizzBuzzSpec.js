@@ -27,4 +27,12 @@ describe('Fizzscript', function() {
         });
     });
 
+    describe('it returns', function() {
+
+        it('Fizzbuzz', function() {
+            fizzscript = new Fizzscript()
+            expect(fizzscript.isFizzbuzz(15)).toEqual('Fizzbuzz')
+        });
+    });
+
 });
