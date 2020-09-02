@@ -8,14 +8,31 @@ class Airport {
   }
 
   clearForLanding(plane) {
-  	this._hanger.push(plane)
+    if (this.isStormy()) {
+        throw new Error('too stormy to land')
+      } else {
+       this._hanger.push(plane)
+      }
     
   };
 
   clearForTakeOff(plane) {
-    this._hanger.pop(plane)
+      if (this.isStormy()) {
+        throw new Error('too stormy to take off')
+      } else {
+          this._hanger.pop(plane)
+      }
 
 
   };
+
+  isStormy() {
+      let num = Math.round(Math.random() * 4)
+      if (num === 1) {
+        return true
+      } else {
+          return false
+      }
+  }
 
 };
