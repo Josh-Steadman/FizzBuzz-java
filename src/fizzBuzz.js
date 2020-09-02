@@ -17,11 +17,11 @@
      }
 
      isFizzbuzz(num) {
-         if (this.isDivisibleByThree(num) === true && this.isDivisibleByFive(num) === true) {
+         if (this.isDivisibleByThree(num)  && this.isDivisibleByFive(num)) {
              return 'Fizzbuzz'
-         } else if (this.isDivisibleByThree(num) === true && this.isDivisibleByFive(num) === false) {
+         } else if (this.isDivisibleByThree(num)) {
              return 'Fizz'
-        } else if (this.isDivisibleByThree(num) === false && this.isDivisibleByFive(num) === true) {
+        } else if ( this.isDivisibleByFive(num)) {
              return 'Buzz'
         } else {
            return num
